@@ -14,3 +14,4 @@ export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --border"
 
 autoload -Uz f
 autoload -Uz d
+autoload -Uz e
