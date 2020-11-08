@@ -17,3 +17,8 @@ export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --border"
 autoload -Uz f
 autoload -Uz d
 autoload -Uz e
+
+# edit command line in EDITOR
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
