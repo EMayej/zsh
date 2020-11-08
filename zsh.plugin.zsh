@@ -1,3 +1,5 @@
+export EDITOR="emacsclient --no-wait"
+
 autoload -Uz take
 
 alias cat=bat
