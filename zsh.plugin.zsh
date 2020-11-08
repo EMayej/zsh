@@ -1,4 +1,4 @@
-export EDITOR="emacsclient --no-wait"
+export EDITOR=emacsclient
 
 autoload -Uz take
 
