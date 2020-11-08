@@ -1,0 +1,3 @@
+# -*- mode: sh -*-
+_pet_prev_cmd=$(fc -lrn | head -n 1)
+pet new "$(printf %q "$_pet_prev_cmd")"
