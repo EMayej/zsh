@@ -1,5 +1,7 @@
 # -*- mode: sh -*-
 
+local file
+
 fasd -flR "$*" \
     | fzf \
           --no-sort \
@@ -7,6 +9,6 @@ fasd -flR "$*" \
           -1 \
           --query="$*" \
           --preview='bat --style=numbers --color=always --line-range :500 {}' \
-    | read -r _fzf_out
-[ -z "$_fzf_out" ] && return
-emacsclient --no-wait "$_fzf_out"
+    | read -r file
+[ -z "$file" ] && return
+emacsclient --no-wait "$file"
