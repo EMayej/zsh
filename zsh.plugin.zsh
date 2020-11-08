@@ -36,3 +36,12 @@ alias gr='cd $(git rev-parse --show-toplevel)'
 alias gst="git status -s"
 alias gt="git log --graph --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%an%Creset %C(bold blue)%cr%Creset' --all"
 alias gu="git pull --rebase --autostash"
+
+# https://github.com/DarrinTisdale/zsh-aliases-exa
+alias ls='exa'
+alias l='exa -lbF --git'                    # list, size, type, git
+alias ll='exa -lbGF --git'                  # long list
+alias llm='exa -lbGF --git --sort=modified' # long list, modified date sort
+alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale' # all list
+alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
+alias lt='exa --tree --level=2' # tree
