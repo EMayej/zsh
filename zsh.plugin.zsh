@@ -28,3 +28,11 @@ autoload -Uz pet-save
 autoload -Uz _pet_load
 zle -N _pet_load
 bindkey '^l' _pet_load
+
+# git aliases
+alias gd="git diff"
+alias gf="git fetch --all"
+alias gr='cd $(git rev-parse --show-toplevel)'
+alias gst="git status -s"
+alias gt="git log --graph --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%an%Creset %C(bold blue)%cr%Creset' --all"
+alias gu="git pull --rebase --autostash"
