@@ -1,5 +1,7 @@
 autoload -Uz take
 
+alias cat=bat
+
 fasd_cache="${ZSH_CACHE_DIR}/fasd-init-cache"
 if [[ "$commands[fasd]" -nt "$fasd_cache" || ! -s "$fasd_cache" ]]; then
     fasd --init zsh-hook >| "$fasd_cache"
