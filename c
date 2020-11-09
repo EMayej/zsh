@@ -1,15 +1,18 @@
 # -*- mode: sh -*-
 #
-# Find directory in fasd and cd into.
+# Find directory under current directory and cd into.
 
 local dir
 
-fasd -dlR "$*" \
+fd \
+    --type=d \
+    --hidden \
+    --exclude={.git,build} \
     | fzf \
           --no-multi \
           -1 \
           --query="$*" \
           --preview='exa --color=always -lbF {}' \
-    | read -r dir
+    | read dir
 [ -z "$dir" ] && return
 cd "$dir" || return
