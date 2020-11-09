@@ -12,7 +12,7 @@ fd \
           --no-multi \
           -1 \
           --query="$*" \
-          --preview='exa --color=always -lbF {}' \
+          --preview='exa --color=always {}' \
     | read dir
 [ -z "$dir" ] && return
 cd "$dir" || return
