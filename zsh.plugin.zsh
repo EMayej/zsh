@@ -1,3 +1,7 @@
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+
 export EDITOR=emacsclient
 
 autoload -Uz take
