@@ -30,9 +30,9 @@ bindkey '^x^e' edit-command-line
 
 # save or load pet snippets
 autoload -Uz pet-save
-autoload -Uz _pet_load
-zle -N _pet_load
-bindkey '^l' _pet_load
+autoload -Uz pet-load
+zle -N pet-load
+bindkey '^l' pet-load
 
 # git aliases
 alias gd="git diff"
