@@ -8,7 +8,6 @@ fasd -dlR "$*" \
     | fzf \
           --no-multi \
           -1 \
-          --query="$*" \
           --preview='exa --color=always {}' \
     | read -r dir
 [ -z "$dir" ] && return

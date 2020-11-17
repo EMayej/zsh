@@ -8,10 +8,10 @@ fd \
     --type=d \
     --hidden \
     --exclude={.git,build} \
+    "$*" \
     | fzf \
           --no-multi \
           -1 \
-          --query="$*" \
           --preview='exa --color=always {}' \
     | read dir
 [ -z "$dir" ] && return
