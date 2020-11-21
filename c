@@ -7,7 +7,7 @@ local dir
 fd \
     --type=d \
     --hidden \
-    --exclude={.git,build} \
+    --exclude={.git} \
     "$*" \
     | fzf \
           --no-multi \

@@ -12,7 +12,7 @@ local file
 fd \
     --type=f \
     --hidden \
-    --exclude={.git,build} \
+    --exclude={.git} \
     "$*" \
     | fzf \
           --no-sort \
