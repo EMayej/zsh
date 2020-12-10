@@ -2,7 +2,7 @@
 #
 # Find file under current directory and open it with emacsclient.
 
-if [ $# -eq 1 ] && [ -e "$1" ]; then
+if [ $# -eq 1 ]; then
     emacsclient --no-wait "$1"
     return
 fi
