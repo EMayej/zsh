@@ -28,6 +28,7 @@ bindkey '^x^e' edit-command-line
 
 # save or load pet snippets
 autoload -Uz pet-save
+
 autoload -Uz pet-load
 zle -N pet-load
-bindkey '^l' pet-load
+bindkey '^x^l' pet-load
