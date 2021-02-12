@@ -1,6 +1,0 @@
-# -*- mode: sh -*-
-
-local snippet
-
-snippet=$(fc -lrn | head -n 1)
-pet new "$(printf %q "$snippet")"

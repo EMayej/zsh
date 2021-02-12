@@ -1,4 +1,0 @@
-# -*- mode: sh -*-
-BUFFER=$(pet search --query "$LBUFFER")
-CURSOR=$#BUFFER
-zle redisplay
