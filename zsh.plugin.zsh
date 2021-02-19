@@ -16,8 +16,10 @@ unset fasd_cache
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude={.git}'
 export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --border"
 
-autoload -Uz c
 autoload -Uz z
+autoload -Uz i
+
+autoload -Uz c
 autoload -Uz e
 autoload -Uz v
 

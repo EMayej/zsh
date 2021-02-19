@@ -1,14 +1,9 @@
 # -*- mode: sh -*-
 #
-# Find directory in fasd and cd into.
+# Find the most related directory in fasd and cd into it.
 
 local dir
 
-fasd -dlR "$*" \
-    | fzf \
-          --no-multi \
-          -1 \
-          --preview='exa --color=always {}' \
-    | read -r dir
+fasd -dl "$*" | tail -1 | read -r dir
 [ -z "$dir" ] && return
 cd "$dir" || return
